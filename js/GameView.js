@@ -6,9 +6,11 @@ class GameView {
   updateBoard(game) {
     this.updateTurn(game)
     const winningCombination = game.findWinningCombinations()
+
     for (let i = 0; i < game.board.length; i++) {
       const tile = document.querySelector(`.board-tile[data-index='${i}']`)
       tile.textContent = game.board[i]
+      const winnerPlayer = document.querySelector('.winner__player')
 
       tile.classList.remove("winner")
 
@@ -20,6 +22,7 @@ class GameView {
 
       if (winningCombination && winningCombination.includes(i)) {
         tile.classList.add('winner')
+       
       }
     }
   }

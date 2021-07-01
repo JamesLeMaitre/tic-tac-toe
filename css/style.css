@@ -2,39 +2,46 @@
 
 *{
   box-sizing: border-box;
-  margin: 0;
 }
 
 body{
   font-family: 'Poppins',sans-serif;
   color: #012E4C;
+  margin: 0 0 3rem 0;
 }
-
+.wrapper.dark-theme{
+  --title-color : #AEAFB2;
+  --background-color: #010106;
+  --font--color: #EFEFF3;
+}
 .wrapper{
-  height: 800px;
-  background-color: #C4CBD0;
+  height: 500px;
+  background-color: #010106;
+  /* background-color: #C4CBD0; */
   display: flex;
-  max-width: 1440px;
+  max-width: 1000px;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   border-radius: 0 0 10px 10px;
-  padding: 40px;
+  padding: 20px;
+  /* color: #012E4C; */
+  color: #EFEFF3;
 }
 .title{
-  max-width: 500px;
+  max-width: 250px;
 }
 h1{
-  font-size: 70px;
+  font-size: 35px;
   font-weight: bold;
 }
 .restart{
-  background-color: #C4CBD0;
+  background-color: #010106;
   width: 175px;
   height: 50px;
   justify-content: center;
   display: flex;
-  color: #012E4C;
+
   border-radius: 50px;
   border: 2px solid #4c6986;
   align-items: center;
@@ -50,8 +57,8 @@ h1{
 }
 
 .game{
-width: 500px;
-height: 500px;
+width: 400px;
+height: 400px;
 color: #012E4C;
 display: flex;
 flex-direction: column;
