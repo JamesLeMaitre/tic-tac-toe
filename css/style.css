@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+  font-family: 'Poppins',sans-serif;
+  color: #012E4C;
+}
+
+.wrapper{
+  height: 800px;
+  background-color: #C4CBD0;
+  display: flex;
+  max-width: 1440px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+  padding: 40px;
+}
+.title{
+  max-width: 500px;
+}
+h1{
+  font-size: 70px;
+  font-weight: bold;
+}
+.restart{
+  background-color: #C4CBD0;
+  width: 175px;
+  height: 50px;
+  justify-content: center;
+  display: flex;
+  color: #012E4C;
+  border-radius: 50px;
+  border: 2px solid #4c6986;
+  align-items: center;
+  cursor: pointer;
+  transition: all .2s ease;
+  font-weight:bold ;
+  margin-top: 30px;
+}
+
+.restart:hover{
+  background-color: #012E4C;
+  color: #C4CBD0;
+}
+
+.game{
+width: 500px;
+height: 500px;
+color: #012E4C;
+display: flex;
+flex-direction: column;
+}
+
+.header{
+  display: flex;
+  color: #fff;
+  font-size: 24px;
+}
+
+.header .player-x{
+  flex: 1;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.header .player-o{
+  flex: 1;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.player-x.active{
+  color: rgb(38, 255, 0);
+  border-color:rgb(38, 255, 0);
+}
+
+.player-o.active{
+  color: rgb(255, 238, 0);
+  border-color:rgb(255, 238, 0) ;
+}
+
+
+.board{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  grid-gap: 0px;
+  flex-grow: 1;
+  background-color: #C4CBD0;
+  color: #012E4C;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px 15px rgba(3,3,3,.2);
+}
+
+.board-tile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  cursor: pointer;
+
+}
+
+.board-tile:not(:nth-child(3n)){
+  border-right: 3px solid #012E4C;
+}
+
+.board-tile:not(:nth-last-child(-n + 3)){
+  border-bottom: 3px solid #012E4C;
+
+}
+.board-tile:hover{
+  background: #eee;
+  border-radius: 5px;
+
+}
+
+.tile-o{
+  color :rgb(255, 238, 0);
+}
+
+.tile-x{
+  color:rgb(38, 255, 0);
+}
+
+.winner span{
+  color: red;
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrapper{
+    flex-direction: column;
+  }
+
+  .left{
+    margin-bottom: 50px;
+  }
+}

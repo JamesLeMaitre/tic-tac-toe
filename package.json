@@ -1,0 +1,8 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "Game Tic-Tac-Toe",
+  "main": "main.js",
+  "author": "jim",
+  "license": "1.0.0"
+}
